@@ -281,15 +281,16 @@
 
 
 
-    <section id="contact_id
-    " class="section scroll-link w-full min-h-screen bg-black px-5 sm:px-10">
+    <section id="contact_id" class="section scroll-link w-full min-h-screen bg-white text-black px-5 sm:px-10" style="font-family: American Typewriter">
         <div class="flex-col gap-y-8 pt-16 ">
-            <div class="flex flex-col sm:flex-row items-center text-left gap-4">
-                <img class="h-16 w-auto" src="../Images/paper_Form.svg" alt="Form Icon">
-                <h1 class="text-lg md:text-2xl lg:text-xl sm:text-2xl font-semibold">For Business Enquiries</h1>
+            <div class="flex justify-center content-center sm:flex-row items-center text-left gap-4 mt-12">
+                <div class="flex gap-x-2">
+                    <img class="h-12 w-auto" src="../Images/paper_Form.svg" alt="Form Icon">
+                    <h1 class="text-base xl:text-3xl md:text-4xl lg:text-xl sm:text-2xl text-black font-semibold">For Business Enquiries</h1>
+                </div>
             </div>
     
-            <form class="w-full max-w-4xl mx-auto " id="contactForm">
+            <form class="w-full max-w-4xl mx-auto mt-4" id="contactForm">
                 <!-- Full Name, Email, Phone (Stack on smaller screens) -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                     <div>
@@ -330,14 +331,15 @@
                         id="message" 
                         name="message" 
                         rows="4" 
-                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                        class="w-full pt-3 pb-1 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
                         required></textarea>
                 </div>
     
                 <!-- Submit Button -->
                 <button 
+                    id="submit_id"
                     type="submit" 
-                    class="w-full sm:w-auto bg-green-500  py-3 px-6 mt-6 rounded-lg hover:bg-blue-600 transition duration-300">
+                    class="w-full mb-3 sm:w-auto bg-green-500  py-3 px-6 mt-6 rounded-lg hover:bg-blue-600 transition duration-300">
                     Submit
                 </button>
             </form>
@@ -349,62 +351,63 @@
     <!-- Section 4 - Contact Us -->
     <footer class="section scroll-link w-full bg-black">
         <div class="flex flex-col md:flex-row gap-6">
-        <!-- Contact Info -->
-        <div class="pt-16 md:pt-20 md:w-1/2">
-            <h1 class="mx-8  text-4xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-pink-600 to-purple-500 bg-clip-text text-transparent">
-            Contact Us
-            </h1>
-            <div class="flex flex-col gap-6 mt-6 mx-8">
-            <!-- Kuwait Office -->
-            <div class="py-3">
-                <h2 class="text-lg md:text-xl font-semibold">Kuwait Head Quarter</h2>
-                <p class="text-sm sm:text-base md:text-lg">
-                Office #6, Floor #1, Fahd Mohamed Al Oteky Bldg., Al Shohada St., Sharq, Kuwait
-                </p>
-                <p class="text-sm sm:text-base md:text-lg">
-                TELEPHONE: +965 2245 9183 - 2245 9173 - 2241 1029<br />
-                FAX: +965 2245 9173
-                </p>
+            <!-- Contact Info -->
+            <div class="pt-16 md:pt-20 md:w-1/2">
+                <h1 class="mx-8 text-4xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-pink-600 to-purple-500 bg-clip-text text-transparent">
+                Contact Us
+                </h1>
+                <div class="flex flex-col gap-6 mt-2 mx-8">
+                <!-- Kuwait Office -->
+                <div class="py-1">
+                    <h2 class="text-lg md:text-xl font-semibold">Kuwait Head Quarter</h2>
+                    <p class="text-sm sm:text-base md:text-lg">
+                    Office #6, Floor #1, Fahd Mohamed Al Oteky Bldg., Al Shohada St., Sharq, Kuwait
+                    </p>
+                    <p class="text-sm sm:text-base md:text-lg">
+                    TELEPHONE: +965 2245 9183 - 2245 9173 - 2241 1029<br />
+                    FAX: +965 2245 9173
+                    </p>
+                </div>
+                <!-- Egypt Office -->
+                <div class="py-1 md:py-3 sm:py-2 ">
+                    <h2 class="text-lg md:text-xl font-semibold">Egypt Branch</h2>
+                    <p class="text-sm sm:text-base md:text-lg">
+                    AlFarouqeya Buildings, Gesr Al Suez, Huckstep, Qism El-Nozha, Cairo Governorate, Egypt
+                    </p>
+                    <p class="text-sm sm:text-base md:text-lg">
+                    TELEPHONE: +2 02 2192 2588<br />
+                    FAX: +2 02 2192 2588
+                    </p>
+                </div>
+                <!-- USA Office -->
+                <div class="py-1">
+                    <h2 class="text-lg md:text-xl font-semibold">USA Branch</h2>
+                    <p class="text-sm sm:text-base md:text-lg">
+                    3001 Colonial PKWY suite# 1127, Cedar Park, TX 78613
+                    </p>
+                    <p class="text-sm sm:text-base md:text-lg">+1 832 267 5617</p>
+                </div>
+                </div>
+                <!-- Contact Links -->
+                <div class="mt-4 mx-8 flex flex-col md:flex-row gap-4 text-base md:text-xl">
+                <h2>www.egcss.com</h2>
+                <h2>ceo@egcss.com</h2>
+                <h2>info@egcss.com</h2>
+                </div>
             </div>
-            <!-- Egypt Office -->
-            <div class="py-1 md:py-3 sm:py-2 ">
-                <h2 class="text-lg md:text-xl font-semibold">Egypt Branch</h2>
-                <p class="text-sm sm:text-base md:text-lg">
-                AlFarouqeya Buildings, Gesr Al Suez, Huckstep, Qism El-Nozha, Cairo Governorate, Egypt
-                </p>
-                <p class="text-sm sm:text-base md:text-lg">
-                TELEPHONE: +2 02 2192 2588<br />
-                FAX: +2 02 2192 2588
-                </p>
-            </div>
-            <!-- USA Office -->
-            <div class="py-3">
-                <h2 class="text-lg md:text-xl font-semibold">USA Branch</h2>
-                <p class="text-sm sm:text-base md:text-lg">
-                3001 Colonial PKWY suite# 1127, Cedar Park, TX 78613
-                </p>
-                <p class="text-sm sm:text-base md:text-lg">+1 832 267 5617</p>
-            </div>
-            </div>
-            <!-- Contact Links -->
-            <div class="mt-4 mx-8 flex flex-col md:flex-row gap-4 text-base md:text-xl">
-            <h2>www.egcss.com</h2>
-            <h2>ceo@egcss.com</h2>
-            <h2>info@egcss.com</h2>
-            </div>
-        </div>
     
-        <!-- Map -->
-        <div class="w-full h-80 md:h-auto md:w-1/2 px-6 md:px-10">
-            <iframe
-            class="h-full w-full rounded-xl"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13503127.28476268!2d27.63829592244767!3d27.854778911129948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14368976c35c36e9%3A0x2c45a00925c4c444!2sEgypt!5e0!3m2!1sen!2s!4v1737979492585!5m2!1sen!2s"
-            style="border: 0;"
-            allowfullscreen="false"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-        </div>
+            <!-- Map -->
+            <div class="w-full h-80 md:h-auto md:w-1/2 px-6 md:px-10 md:pt-20 lg:pt-20 xl:pt-20 sm:pt-20 pt-20">
+                <iframe
+                class="h-full w-full rounded-xl"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13503127.28476268!2d27.63829592244767!3d27.854778911129948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14368976c35c36e9%3A0x2c45a00925c4c444!2sEgypt!5e0!3m2!1sen!2s!4v1737979492585!5m2!1sen!2s"
+                style="border: 0;"
+                allowfullscreen="false"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+            </div>
         </div>
     </footer>
     
@@ -458,6 +461,10 @@
             alert("Error sending message. Please try again.");
             });
         });
+
+        document.getElementById("submit_id").addEventListener('click', (event) => {
+            alert('Your Message Was Sent To Our Email!');
+        });        
         </script>
 
 
