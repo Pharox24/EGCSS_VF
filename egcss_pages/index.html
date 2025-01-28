@@ -38,46 +38,46 @@
 
     </head>
 
-    <body class="overflow-x-hidden">
+    <body class="overflow-x-hidden text-white bg-black">
 
         <!-- Navbar -->
-<div class="navbar bg-black text-white fixed w-full z-20">
-    <div class="container flex items-center justify-between h-16">
-        <!-- Logo Section -->
-        <div class="flex gap-x-2 text-white">
-            <h1 class="flex items-center text-white text-xl pl-3 mx-4">EGCSS</h1>
-            <a href="home_ar.html" class="px-2 py-1 font-bold hover:bg-white hover:text-black rounded-xl">Ar</a>
-            <h1 class="px-1 py-1">|</h1>
-            <a href="index.html" class="px-2 py-1 font-bold hover:bg-white hover:text-black rounded-xl">En</a>
+        <div class="navbar bg-indigo-900  fixed w-full z-20">
+            <div class="container flex items-center justify-between h-16">
+                <!-- Logo Section -->
+                <div class="flex gap-x-2 ">
+                    <h1 class="flex items-center  text-xl pl-3 mx-4">EGCSS</h1>
+                    <a href="home_ar.html" class="px-2 py-1 font-bold hover:bg-white hover:text-black rounded-xl">Ar</a>
+                    <h1 class="px-1 py-1">|</h1>
+                    <a href="index.html" class="px-2 py-1 font-bold hover:bg-white hover:text-black rounded-xl">En</a>
+                </div>
+
+                <!-- Hamburger Menu (Mobile) -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="focus:outline-none text-3xl mr-3">
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Navbar Links (Hidden on Mobile by Default) -->
+                <div id="menu" class="hidden md:flex space-x-4 text-[clamp(1rem, 2.5vw, 2rem)]">
+                    <a href="../index.html" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white" target="_blank">SMIFID Group</a>
+                    <a href="#home_id" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white">Home</a>
+                    <a href="#about_id" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white">About Us</a>
+                    <a href="#service_id" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white">Services</a>
+                    <a href="#contact_id" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white">Contact Us</a>
+                </div>
+            </div>
         </div>
 
-        <!-- Hamburger Menu (Mobile) -->
-        <div class="md:hidden">
-            <button id="menu-toggle" class="text-white focus:outline-none text-3xl">
-                <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-
-        <!-- Navbar Links (Hidden on Mobile by Default) -->
-        <div id="menu" class="hidden md:flex space-x-4 text-[clamp(1rem, 2.5vw, 2rem)]">
-            <a href="../index.html" class="px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl" target="_blank">SMIFID Group</a>
-            <a href="#home_id" class="px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl">Home</a>
-            <a href="#about_id" class="px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl">About Us</a>
-            <a href="#service_id" class="px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl">Services</a>
-            <a href="#contact_id" class="px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl">Contact Us</a>
-        </div>
+    <!-- Mobile Menu (Dropdown) -->
+    <div id="mobile-menu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-indigo-900 z-30 max-h-[400px] overflow-y-auto shadow-lg transition-all">
+        <a href="#home_id" class="block  py-4 px-4 hover:text-black hover:bg-white rounded-xl">Home</a>
+        <a href="#about_id" class="block  py-4 px-4 hover:text-black hover:bg-white rounded-xl">About Us</a>
+        <a href="#service_id" class="block  py-4 px-4 hover:text-black hover:bg-white rounded-xl">Services</a>
+        <a href="#contact_id" class="block  py-4 px-4 hover:text-black hover:bg-white rounded-xl">Contact Us</a>
     </div>
-</div>
-
-<!-- Mobile Menu (Dropdown) -->
-<div id="mobile-menu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-black z-30 max-h-[400px] overflow-y-auto shadow-lg transition-all">
-    <a href="#home_id" class="block text-white py-4 px-4 hover:text-black hover:bg-white rounded-xl">Home</a>
-    <a href="#about_id" class="block text-white py-4 px-4 hover:text-black hover:bg-white rounded-xl">About Us</a>
-    <a href="#service_id" class="block text-white py-4 px-4 hover:text-black hover:bg-white rounded-xl">Services</a>
-    <a href="#contact_id" class="block text-white py-4 px-4 hover:text-black hover:bg-white rounded-xl">Contact Us</a>
-</div>
 
 
 <script>
@@ -116,7 +116,7 @@
     
 
     <div class="overflow-hidden whitespace-nowrap relative bg-white border-lg p-5">
-        <div class="inline-block text-lg font-bold text-black marquee">
+        <div class="inline-block text-xl font-bold text-black marquee" style="font-family: American Typewriter">
             <span class="mx-8">USA</span>
             <span class="mx-8">Canada</span>
             <span class="mx-8">UK</span>
@@ -164,7 +164,7 @@
     
 
     <!-- Section 1 : Home & Introduction -->
-    <section id="home_id" class="section scroll-link flex flex-col justify-center items-center bg-black text-white w-full min-h-screen p-5">
+    <section id="home_id" class="section scroll-link flex flex-col justify-center items-center bg-black  w-full min-h-screen p-5">
         <div class="flex flex-col md:flex-row items-center gap-10 max-w-screen-xl">
             
             <!-- Image Section -->
@@ -174,7 +174,7 @@
 
             <!-- Text Section -->
             <div class="text-center md:text-left">
-                <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mx-5 sm:mx-10 md:mx-0 leading-relaxed">
+                <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl mx-5 sm:mx-10 md:mx-0 leading-relaxed">
                     Welcome to <span class="font-bold text-blue-400">EGCSS</span>, a Kuwait-based registered company specializing in Shipping, International Freight Forwarding, and Logistics. We offer comprehensive Sea, Air, and Overland transportation services to meet your business needs.
                     <br><br>
                     Founded by an experienced shipping professional with over 20 years of industry expertise, we have successfully navigated all facets of the logistics sector, from working with ship owners to providing Total Logistics solutions.
@@ -191,7 +191,7 @@
 
 
     <!-- Section 2 : About EGCSS -->
-    <section id="about_id" class="section scroll-link flex flex-col justify-center items-center bg-black text-white w-full min-h-screen p-5">
+    <section id="about_id" class="section scroll-link flex flex-col justify-center items-center bg-black  w-full min-h-screen p-5">
         <div class="flex flex-col md:flex-row items-center gap-10 max-w-screen-xl">
 
             <!-- Text Section -->
@@ -216,7 +216,7 @@
 
 
     <!-- Section 3 : EGCSS Services -->
-        <section id="service_id" class="relative bg-red-black section scroll-link flex-col justify-center items-center bg-black text-white w-full min-h-screen ">
+        <section id="service_id" class="relative bg-red-black section scroll-link flex-col justify-center items-center bg-black  w-full min-h-screen ">
                 
             <!-- Background Image -->
             <img class="w-full object-cover h-screen opacity-40" src="../Images/shipping_stock_img.webp">
@@ -281,18 +281,19 @@
 
 
 
-    <section id="contact_id" class="section scroll-link w-full min-h-screen bg-black px-5 sm:px-10">
-        <div class="flex-col gap-y-8 pt-16 text-white">
+    <section id="contact_id
+    " class="section scroll-link w-full min-h-screen bg-black px-5 sm:px-10">
+        <div class="flex-col gap-y-8 pt-16 ">
             <div class="flex flex-col sm:flex-row items-center text-left gap-4">
                 <img class="h-16 w-auto" src="../Images/paper_Form.svg" alt="Form Icon">
                 <h1 class="text-lg md:text-2xl lg:text-xl sm:text-2xl font-semibold">For Business Enquiries</h1>
             </div>
     
-            <form class="w-full max-w-4xl mx-auto text-black" id="contactForm">
+            <form class="w-full max-w-4xl mx-auto " id="contactForm">
                 <!-- Full Name, Email, Phone (Stack on smaller screens) -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                     <div>
-                        <label class="block font-semibold text-white text-xl sm:text-2xl mb-2" for="fullName">Full Name</label>
+                        <label class="block font-semibold  text-xl sm:text-2xl mb-2" for="fullName">Full Name</label>
                         <input 
                             type="text" 
                             id="fullName" 
@@ -302,7 +303,7 @@
                     </div>
     
                     <div>
-                        <label class="block font-semibold text-white text-xl sm:text-2xl mb-2" for="email">Email</label>
+                        <label class="block font-semibold  text-xl sm:text-2xl mb-2" for="email">Email</label>
                         <input 
                             type="email" 
                             id="email" 
@@ -312,7 +313,7 @@
                     </div>
     
                     <div>
-                        <label class="block font-semibold text-white text-xl sm:text-2xl mb-2" for="phone">Phone</label>
+                        <label class="block font-semibold  text-xl sm:text-2xl mb-2" for="phone">Phone</label>
                         <input 
                             type="tel" 
                             id="phone" 
@@ -324,7 +325,7 @@
     
                 <!-- Message -->
                 <div class="mt-5">
-                    <label class="block font-semibold text-white text-xl sm:text-2xl mb-2" for="message">Message</label>
+                    <label class="block font-semibold  text-xl sm:text-2xl mb-2" for="message">Message</label>
                     <textarea 
                         id="message" 
                         name="message" 
@@ -336,7 +337,7 @@
                 <!-- Submit Button -->
                 <button 
                     type="submit" 
-                    class="w-full sm:w-auto bg-green-500 text-white py-3 px-6 mt-6 rounded-lg hover:bg-blue-600 transition duration-300">
+                    class="w-full sm:w-auto bg-green-500  py-3 px-6 mt-6 rounded-lg hover:bg-blue-600 transition duration-300">
                     Submit
                 </button>
             </form>
@@ -346,52 +347,67 @@
 
 
     <!-- Section 4 - Contact Us -->
-    <footer id="footer_id" class="section scroll-link w-full h-screen bg-black">
-        
-        <div class="flex gap-y-6">
-            <div class="pt-20">
-                <h1 class="mx-8 text-6xl font-bold bg-gradient-to-r from-red-400 via-pink-600 to-purple-500 bg-clip-text text-transparent">Contact Us</h1>
-                <!-- Company Info -->
-                <div class="flex-cols gap-x-10">
-                    <div class="mx-8 mt-4 flex-cols items-center content-center gap-y-8 text-white">
-                        <div class="py-3">
-                            <h1 class="text-xl">Kuwait Head Quarter</h1>
-                            <p class="text-lg">Office #6, Floor #1, Fahd Mohamed Al Oteky Bldg., Al Shohada St., Sharq, Kuwait</p>
-                            <p class="text-lg">TELEPHONE: +965 2245 9183 - 2245 9173 - 2241 1029 FAX: +965 2245 9173</p>
-                        </div>
-
-                        <div class="py-3">
-                            <h1 class="text-xl">Egypt Branch</h1>
-                            <p class="text-lg">AlFarouqeya Buildings, Gesr Al Suez, Huckstep, Qism El-Nozha, Cairo Governorate, Egypt</p>
-                            <p class="text-lg">TELEPHONE: +2 02 2192 2588 FAX: +2 02 2192 2588</p>
-                        </div>
-
-                        <div class="py-3">
-                            <h1 class="text-xl">USA Branch</h1>
-                            <p class="text-lg">3001 Colonial PKWY suite# 1127, Cedar Park, TX 78613</p>
-                            <p class="text-lg">+1 832 267 5617</p>
-                        </div>
-
-                    </div>
-
-                    <div class="mx-8 mt-4 flex gap-x-5 items-center content-center gap-y-2 text-white text-xl">
-                        <h2>www.egcss.com</h2>
-                        <h2>ceo@egcss.com</h2>
-                        <h2>info@egcss.com</h2>
-                    </div>
-                </div>
-                
+    <footer class="section scroll-link w-full bg-black">
+        <div class="flex flex-col md:flex-row gap-6">
+        <!-- Contact Info -->
+        <div class="pt-16 md:pt-20 md:w-1/2">
+            <h1 class="mx-8  text-4xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-pink-600 to-purple-500 bg-clip-text text-transparent">
+            Contact Us
+            </h1>
+            <div class="flex flex-col gap-6 mt-6 mx-8">
+            <!-- Kuwait Office -->
+            <div class="py-3">
+                <h2 class="text-lg md:text-xl font-semibold">Kuwait Head Quarter</h2>
+                <p class="text-sm sm:text-base md:text-lg">
+                Office #6, Floor #1, Fahd Mohamed Al Oteky Bldg., Al Shohada St., Sharq, Kuwait
+                </p>
+                <p class="text-sm sm:text-base md:text-lg">
+                TELEPHONE: +965 2245 9183 - 2245 9173 - 2241 1029<br />
+                FAX: +965 2245 9173
+                </p>
             </div>
-
-            <div class="w-full px-10 pt-16">
-                <iframe class="h-full w-full  rounded-xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13503127.28476268!2d27.63829592244767!3d27.854778911129948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14368976c35c36e9%3A0x2c45a00925c4c444!2sEgypt!5e0!3m2!1sen!2s!4v1737979492585!5m2!1sen!2s" style="border:0;" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- Egypt Office -->
+            <div class="py-1 md:py-3 sm:py-2 ">
+                <h2 class="text-lg md:text-xl font-semibold">Egypt Branch</h2>
+                <p class="text-sm sm:text-base md:text-lg">
+                AlFarouqeya Buildings, Gesr Al Suez, Huckstep, Qism El-Nozha, Cairo Governorate, Egypt
+                </p>
+                <p class="text-sm sm:text-base md:text-lg">
+                TELEPHONE: +2 02 2192 2588<br />
+                FAX: +2 02 2192 2588
+                </p>
             </div>
-    
-
+            <!-- USA Office -->
+            <div class="py-3">
+                <h2 class="text-lg md:text-xl font-semibold">USA Branch</h2>
+                <p class="text-sm sm:text-base md:text-lg">
+                3001 Colonial PKWY suite# 1127, Cedar Park, TX 78613
+                </p>
+                <p class="text-sm sm:text-base md:text-lg">+1 832 267 5617</p>
+            </div>
+            </div>
+            <!-- Contact Links -->
+            <div class="mt-4 mx-8 flex flex-col md:flex-row gap-4 text-base md:text-xl">
+            <h2>www.egcss.com</h2>
+            <h2>ceo@egcss.com</h2>
+            <h2>info@egcss.com</h2>
+            </div>
         </div>
-
-
+    
+        <!-- Map -->
+        <div class="w-full h-80 md:h-auto md:w-1/2 px-6 md:px-10">
+            <iframe
+            class="h-full w-full rounded-xl"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13503127.28476268!2d27.63829592244767!3d27.854778911129948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14368976c35c36e9%3A0x2c45a00925c4c444!2sEgypt!5e0!3m2!1sen!2s!4v1737979492585!5m2!1sen!2s"
+            style="border: 0;"
+            allowfullscreen="false"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </div>
+        </div>
     </footer>
+    
 
     </div>
 
