@@ -20,16 +20,6 @@
                 overflow-x: hidden;
                 overflow-y hidden;
             }
-
-            @keyframes scroll {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-50%); }
-              }
-            
-              .marquee {
-                display: inline-block;
-                animation: scroll 10s linear infinite;
-              }
         
             /* Parent container for scroll snapping */
             .snap-container {
@@ -48,46 +38,46 @@
 
     </head>
 
-    <body class="overflow-x-hidden">
+    <body class="overflow-x-hidden text-white bg-black">
 
         <!-- Navbar -->
-<div class="navbar bg-black text-white fixed w-full z-20">
-    <div class="container flex items-center justify-between h-16">
-        <!-- Logo Section -->
-        <div class="flex gap-x-2 text-white">
-            <h1 class="flex items-center text-white text-xl pl-3 mx-4">EGCSS</h1>
-            <a href="home_ar.html" class="px-2 py-1 font-bold hover:bg-white hover:text-black rounded-xl">Ar</a>
-            <h1 class="px-1 py-1">|</h1>
-            <a href="index.html" class="px-2 py-1 font-bold hover:bg-white hover:text-black rounded-xl">En</a>
+        <div class="navbar bg-indigo-900  fixed w-full z-20">
+            <div class="container flex items-center justify-between h-16">
+                <!-- Logo Section -->
+                <div class="flex gap-x-2 ">
+                    <h1 class="flex items-center  text-xl pl-3 mx-4">EGCSS</h1>
+                    <a href="home_ar.html" class="px-2 py-1 font-bold hover:bg-white hover:text-black rounded-xl">Ar</a>
+                    <h1 class="px-1 py-1">|</h1>
+                    <a href="index.html" class="px-2 py-1 font-bold hover:bg-white hover:text-black rounded-xl">En</a>
+                </div>
+
+                <!-- Hamburger Menu (Mobile) -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="focus:outline-none text-3xl mr-3">
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Navbar Links (Hidden on Mobile by Default) -->
+                <div id="menu" class="hidden md:flex space-x-4 text-[clamp(1rem, 2.5vw, 2rem)]">
+                    <a href="../index.html" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white" target="_blank">SMIFID</a>
+                    <a href="#home_id" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white">الرئيسية</a>
+                    <a href="#about_id" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white">من نحن</a>
+                    <a href="#service_id" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white">الخدمات</a>
+                    <a href="#contact_id" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white">تواصل معنا</a>
+                </div>
+            </div>
         </div>
 
-        <!-- Hamburger Menu (Mobile) -->
-        <div class="md:hidden">
-            <button id="menu-toggle" class="text-white focus:outline-none text-3xl">
-                <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-
-        <!-- Navbar Links (Hidden on Mobile by Default) -->
-        <div id="menu" class="hidden md:flex space-x-4 text-[clamp(1rem, 2.5vw, 2rem)]">
-            <a href="../index.html" class="px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl" target="_blank">SMIFID</a>
-            <a href="#home_id" class="px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl">الرئيسية</a>
-            <a href="#about_id" class="px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl">من نحن</a>
-            <a href="#service_id" class="px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl">الخدمات</a>
-            <a href="#contact_id" class="px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl">اتصل بنا</a>
-        </div>
+    <!-- Mobile Menu (Dropdown) -->
+    <div id="mobile-menu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-indigo-900 z-30 max-h-[400px] overflow-y-auto shadow-lg transition-all">
+        <a href="#home_id" class="block  py-4 px-4 hover:text-black hover:bg-white rounded-xl">الرئيسية</a>
+        <a href="#about_id" class="block  py-4 px-4 hover:text-black hover:bg-white rounded-xl">من نحن</a>
+        <a href="#service_id" class="block  py-4 px-4 hover:text-black hover:bg-white rounded-xl">الخدمات</a>
+        <a href="#contact_id" class="block  py-4 px-4 hover:text-black hover:bg-white rounded-xl">تواصل معنا</a>
     </div>
-</div>
-
-<!-- Mobile Menu (Dropdown) -->
-<div id="mobile-menu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-black z-30 max-h-[400px] overflow-y-auto shadow-lg transition-all">
-    <a href="#home_id" class="block text-white py-4 px-4 hover:text-black hover:bg-white rounded-xl">الرئيسية</a>
-    <a href="#about_id" class="block text-white py-4 px-4 hover:text-black hover:bg-white rounded-xl">من نحن</a>
-    <a href="#service_id" class="block text-white py-4 px-4 hover:text-black hover:bg-white rounded-xl">الخدمات</a>
-    <a href="#contact_id" class="block text-white py-4 px-4 hover:text-black hover:bg-white rounded-xl">اتصل بنا</a>
-</div>
 
 
 <script>
@@ -126,7 +116,7 @@
     
 
     <div class="overflow-hidden whitespace-nowrap relative bg-white border-lg p-5">
-        <div class="inline-block text-lg font-bold text-black marquee">
+        <div class="inline-block text-xl font-bold text-black marquee" style="font-family: American Typewriter">
             <span class="mx-8">الولايات المتحدة</span>
             <span class="mx-8">كندا</span>
             <span class="mx-8">المملكة المتحدة</span>
@@ -138,9 +128,9 @@
             <span class="mx-8">الهند</span>
             <span class="mx-8">مصر</span>
             <span class="mx-8">الكويت</span>
-            <span class="mx-8">المملكة العربية السعودية</span>
-            
-            
+            <span class="mx-8">السعودية</span>
+
+
             <span class="mx-8">الولايات المتحدة</span>
             <span class="mx-8">كندا</span>
             <span class="mx-8">المملكة المتحدة</span>
@@ -152,11 +142,21 @@
             <span class="mx-8">الهند</span>
             <span class="mx-8">مصر</span>
             <span class="mx-8">الكويت</span>
-            <span class="mx-8">المملكة العربية السعودية</span>
+            <span class="mx-8">السعودية</span>
         </div>
     </div>
     
-
+    <style>
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+    
+      .marquee {
+        display: inline-block;
+        animation: scroll 10s linear infinite;
+      }
+    </style>
     
 
 
@@ -165,7 +165,7 @@
     
 
     <!-- Section 1 : Home & Introduction -->
-    <section id="home_id" class="section scroll-link flex flex-col justify-center items-center bg-black text-white w-full min-h-screen p-5">
+    <section id="home_id" class="section scroll-link flex flex-col justify-center items-center bg-black  w-full min-h-screen p-5">
         <div class="flex flex-col md:flex-row items-center gap-10 max-w-screen-xl">
             
             <!-- Image Section -->
@@ -175,16 +175,16 @@
 
             <!-- Text Section -->
             <div class="text-center md:text-left">
-                <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mx-5 sm:mx-10 md:mx-0 leading-relaxed">
-                    مرحبًا بكم في <span class="font-bold text-blue-400">EGCSS</span>، شركة مسجلة مقرها الكويت ومتخصصة في الشحن، الشحن الدولي، والخدمات اللوجستية. نقدم خدمات شاملة للنقل البحري، الجوي، والبري لتلبية احتياجات عملك.  
+                <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl mx-5 sm:mx-10 md:mx-0 leading-relaxed">
+                    مرحباً بكم في <span class="font-bold text-blue-400">EGCSS</span>، شركة مسجلة في الكويت متخصصة في الشحن، خدمات الشحن الدولي، والخدمات اللوجستية. نقدم خدمات شاملة للنقل البحري، الجوي، والبري لتلبية احتياجات أعمالكم.  
                     <br><br>
-                    تأسست الشركة على يد خبير شحن يتمتع بأكثر من 20 عامًا من الخبرة في هذا المجال، وقد نجحنا في التعامل مع جميع جوانب قطاع الخدمات اللوجستية، بدءًا من العمل مع مالكي السفن وصولاً إلى تقديم حلول لوجستية متكاملة.  
+                    تأسست شركتنا على يد محترف في مجال الشحن يتمتع بخبرة تزيد عن 20 عامًا في هذا القطاع. نجحنا في التعامل مع جميع جوانب قطاع الخدمات اللوجستية، بدءًا من العمل مع مالكي السفن وصولاً إلى توفير حلول لوجستية شاملة.  
                     <br><br>
-                    تشمل خدماتنا أنشطة المناطق الحرة، الشحن الجوي والبحري، تمثيل وكالات NVOCC، توريد السفن، وإدارة المشاريع. في <span class="font-bold text-blue-400">EGCSS</span>، نحن نقدر وقتك ودائمًا على استعداد لدعم احتياجاتك اللوجستية.  
+                    تشمل خدماتنا أنشطة المناطق الحرة، الشحن الجوي والبحري، تمثيل وكالات NVOCC، تموين السفن، وإدارة المشاريع. في <span class="font-bold text-blue-400">EGCSS</span>، نقدر وقتكم ونحن دائمًا جاهزون لدعم احتياجاتكم اللوجستية.  
                     <br><br>
-                    مع <span class="font-bold text-blue-400">EGCSS</span>، ستكون مستعدًا للتحركات الجديدة في أي وقت. لماذا تختارنا؟ ببساطة، لأننا نهتم بعملك ونجاحك.
-                </p>
+                    مع <span class="font-bold text-blue-400">EGCSS</span>، ستكونون مستعدين لأي تحركات جديدة في أي وقت. لماذا تختاروننا؟ ببساطة، لأننا نهتم بأعمالكم ونجاحكم.  
                     
+                </p>
             </div>
 
         </div>
@@ -193,17 +193,15 @@
 
 
     <!-- Section 2 : About EGCSS -->
-    <section id="about_id" class="section scroll-link flex flex-col justify-center items-center bg-black text-white w-full min-h-screen p-5">
+    <section id="about_id" class="section scroll-link flex flex-col justify-center items-center bg-black  w-full min-h-screen p-5">
         <div class="flex flex-col md:flex-row items-center gap-10 max-w-screen-xl">
 
             <!-- Text Section -->
             <div class="text-center md:text-left">
-                <h1 class="text-right text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-10 mx-5 sm:mx-10">خبرتنا وتجربتنا</h1>
+                <h1 class="text-2xl text-right sm:text-3xl md:text-4xl lg:text-5xl mt-10 mx-5 sm:mx-10">خبرتنا وتجربتنا</h1>
 
-                <div class="text-sm sm:text-base md:text-lg lg:text-xl mt-5 mx-5 sm:mx-10 md:mx-0 mb-10 leading-relaxed">
-                    تم تأسيس EGCSS في عام 2007 من قبل فريق محترف مخلص يسعى لتقديم خدمات لوجستية استثنائية. تم بناء شركتنا على أساس تقديم أعلى مستويات الجودة بأكثر الأسعار تنافسية، مما يضمن لعملائنا القدرة على الازدهار في بيئة السوق التنافسية.  
-                    <br><br>  
-                    لقد أكسبنا التزامنا برضا العملاء علاقات طويلة الأمد مع عملائنا، حيث استمر العديد منهم معنا لسنوات. نحن نفخر بقدرتنا على التكيف مع المشهد اللوجستي الديناميكي مع الحفاظ على تركيزنا على تقديم حلول قائمة على القيمة.
+                <div class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-right mt-5 mx-5 sm:mx-10 md:mx-0 mb-10 leading-relaxed">
+                    تم تأسيس EGCSS في عام 2007 على يد فريق متخصص ملتزم بتقديم خدمات لوجستية استثنائية، حيث بنيت شركتنا على أساس تقديم أعلى مستويات الخدمة بأفضل الأسعار التنافسية، مما يضمن قدرة عملائنا على النجاح في بيئة سوق مليئة بالتحديات. لقد أكسبنا التزامنا برضا العملاء علاقات طويلة الأمد معهم، حيث استمر العديد منهم في التعاون معنا لسنوات. نحن نفخر بقدرتنا على التكيف مع المشهد الديناميكي للخدمات اللوجستية مع الحفاظ على تركيزنا على تقديم حلول قائمة على القيمة.
                 </div>
             </div>
 
@@ -216,7 +214,7 @@
 
 
     <!-- Section 3 : EGCSS Services -->
-        <section id="service_id" class="relative bg-red-black section scroll-link flex-col justify-center items-center bg-black text-white w-full min-h-screen ">
+        <section id="service_id" class="relative bg-red-black section scroll-link flex-col justify-center items-center bg-black  w-full min-h-screen ">
                 
             <!-- Background Image -->
             <img class="w-full object-cover h-screen opacity-40" src="../Images/shipping_stock_img.webp">
@@ -225,9 +223,9 @@
             <div class="absolute inset-0 mt-5 text-xs  max-sm:text-black">
                         
                 <!-- Section Title -->
-                <h1 class="xl:text-6xl lg:text-4xl md:text-4xl sm:text-xl text-base mt-16  mx-10  text-center">خدماتنا</h1>
+                <h1 class="xl:text-6xl lg:text-4xl md:text-4xl sm:text-xl text-base mt-16  mx-10 text-center"> خدماتنا</h1>
 
-                <!-- Service Content -->
+                <!-- محتوى الخدمات -->
                 <div class="flex flex-col md:flex-row gap-8 text-sm sm:text-base mt-5 mx-10 mb-10 text-right">
 
                     <!-- الشحن البحري -->
@@ -236,63 +234,66 @@
                         <div class="mt-2 text-xs sm:text-base md:text-base">
                             <p>تقدم EGCSS خدمات شحن منتظمة تشمل:</p>
                             <ul>
-                                <li>- الحاويات الكاملة (FCL)</li>
-                                <li>- الشحنات الأقل من حاوية (LCL)</li>
+                                <li>- شحن الحاويات الكاملة (FCL)</li>
+                                <li>- شحن أقل من حمولة الحاوية (LCL)</li>
                                 <li>- شحن المعدات الخاصة</li>
                             </ul>
-                            <p>بفضل شراكاتنا القوية مع كبرى خطوط الشحن، يمكننا تأمين أسعار تنافسية وترتيبات حجز خاصة. تشمل خدمات الشحن البحري لدينا:</p>
+                            <p>بفضل شراكاتنا القوية مع خطوط الشحن الرئيسية، نستطيع توفير أسعار تنافسية وترتيبات حجز خاصة. تشمل خدمات الشحن البحري لدينا:</p>
                             <ul>
-                                <li>- تجميع الشحنات بانتظام.</li>
-                                <li>- تأجير السفن (رحلة أو زمن) بخدمات عالية الجودة.</li>
-                                <li>- التوصيل من الباب إلى الباب.</li>
-                                <li>- التعامل مع شحنات المشاريع، بما في ذلك الأحمال الثقيلة والشحنات ذات الحجم الكبير.</li>
-                                <li>- خدمات استشارية للمنتجات الطازجة، البضائع الخطرة، والمعالجة المتخصصة.</li>
-                                <li>- النقل بالجملة للسلع السائلة باستخدام خزانات فليكسي وخزانات ISO.</li>
+                                <li>- توحيد الشحنات المنتظمة.</li>
+                                <li>- تأجير السفن (رحلة أو مدة) مع خدمات عالية الجودة.</li>
+                                <li>- التسليم من الباب إلى الباب.</li>
+                                <li>- مناولة شحنات المشاريع، بما في ذلك الأحمال الثقيلة والشحنات ذات الأحجام الكبيرة.</li>
+                                <li>- خدمات استشارية للمنتجات الطازجة والبضائع الخطرة والمناولة المتخصصة.</li>
+                                <li>- نقل البضائع السائلة بالجملة باستخدام خزانات Flexi وخزانات ISO.</li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- النقل والتخزين -->
+                    <!-- النقل البري والتخزين -->
                     <div class="w-full md:w-1/3">
                         <h2 class="text-base lg:text-3xl md:text-3xl xl:text-4xl sm:text-2xl text-bold">النقل البري</h2>
-                        <p class="mt-2 text-xs sm:text-base">تقدم EGCSS خدمات نقل موثوقة محليًا ودوليًا عبر دول مجلس التعاون الخليجي، شمال إفريقيا، والشرق الأوسط. نقدم أسعارًا تنافسية وخدمات عالية الجودة تشمل:</p>
+                        <p class="mt-2 text-xs sm:text-base">توفر EGCSS خدمات نقل بري موثوقة محلياً ودولياً عبر دول مجلس التعاون الخليجي وشمال أفريقيا والشرق الأوسط. نقدم أسعارًا تنافسية وخدمات عالية الجودة تشمل:</p>
                         <ul>
-                            <li>المقطورات ذات الأسِرة المنخفضة للشحنات الكبيرة.</li>
-                            <li>المقطورات المبردة للمنتجات الطازجة والمجمدة.</li>
+                            <li>مقطورات منخفضة لنقل الشحنات ذات الأحجام الكبيرة.</li>
+                            <li>مقطورات مبردة للمنتجات الطازجة والمجمدة.</li>
                         </ul>
 
                         <h2 class="text-base lg:text-3xl md:text-3xl xl:text-4xl sm:text-2xl text-bold mt-5">التخزين</h2>
-                        <p class="text-xs sm:text-base">تقع منشأة التخزين المتطورة الخاصة بنا في موقع استراتيجي داخل المنطقة الاقتصادية لقناة السويس، على بعد أقل من كيلومتر واحد من ميناء السخنة. تمتد المنشأة على مساحة 25,000 متر مربع وهي مجهزة بالكامل للتعامل مع جميع أنواع الشحنات والبضائع، مما يضمن عمليات لوجستية سلسة.</p>
+                        <p class="text-xs sm:text-base">منشأتنا الحديثة للتخزين تقع استراتيجياً داخل منطقة قناة السويس الاقتصادية وعلى بعد أقل من كيلومتر واحد من ميناء السخنة. تمتد على مساحة إجمالية تبلغ 25,000 متر مربع ومجهزة بالكامل للتعامل مع جميع أنواع الشحنات والبضائع، مما يضمن عمليات لوجستية سلسة.</p>
                     </div>
 
                     <!-- الشحن الجوي -->
                     <div class="w-full md:w-1/3">
                         <h2 class="text-base sm:text-2xl lg:text-3xl md:text-3xl xl:text-4xl text-bold">الشحن الجوي</h2>
-                        <p class="mt-2 text-xs sm:text-base">تتعامل EGCSS مع حجوزات جميع أنواع الشحنات الجوية. يتيح لنا حجم العمل الكبير وعلاقاتنا القوية مع شركات الطيران المختلفة تأمين أسعار تنافسية وحجوزات موثوقة. نحن متخصصون في التعامل مع البضائع القابلة للتلف، البضائع الخطرة، والمنتجات الحساسة للوقت التي تتطلب معالجة سريعة. تشمل خدماتنا:</p>
+                        <p class="mt-2 text-xs sm:text-base">تقوم EGCSS بترتيب حجوزات لجميع أنواع الشحنات الجوية. حجم العمل الكبير لدينا وعلاقاتنا القوية مع مختلف شركات الطيران تمكننا من تقديم أسعار تنافسية وحجوزات موثوقة. نحن متخصصون في التعامل مع البضائع القابلة للتلف، والشحنات الخطرة، والمنتجات الحساسة للوقت التي تتطلب معالجة سريعة. تشمل خدماتنا:</p>
                         <ul>
-                            <li>تجميع الشحنات الجوية على المستوى العالمي.</li>
+                            <li>تجميع الشحنات الجوية عالمياً.</li>
                             <li>تأجير الطائرات إلى ومن جميع الوجهات المطلوبة.</li>
                         </ul>
                     </div>
 
                 </div>
+
             </div>
         </section>
 
 
 
-    <section class="section scroll-link w-full min-h-screen bg-black px-5 sm:px-10">
-        <div class="flex-col gap-y-8 pt-16 text-white">
-            <div class="flex flex-col sm:flex-row items-center text-center gap-4">
-                <h1 class="text-lg md:text-2xl lg:text-xl sm:text-2xl text- font-semibold">للاستفسارات التجارية</h1>
-                <img class="h-16 w-auto " src="../Images/paper_Form.svg" alt="Form Icon">
+    <section id="contact_id" class="section scroll-link w-full min-h-screen bg-white text-black px-5 sm:px-10" style="font-family: American Typewriter">
+        <div class="flex-col gap-y-8 pt-16 ">
+            <div class="flex justify-center content-center sm:flex-row items-center text-left gap-4 mt-12">
+                <div class="flex gap-x-2">
+                    <img class="h-12 w-auto" src="../Images/paper_Form.svg" alt="Form Icon">
+                    <h1 class="text-base xl:text-3xl md:text-4xl lg:text-xl sm:text-2xl text-black font-semibold">للاستفسارات التجارية</h1>
+                </div>
             </div>
     
-            <form class="w-full max-w-4xl mx-auto text-black" id="contactForm">
+            <form class="w-full max-w-4xl mx-auto mt-4" id="contactForm">
                 <!-- Full Name, Email, Phone (Stack on smaller screens) -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                     <div>
-                        <label class="block font-semibold text-center text-white text-xl sm:text-2xl mb-2" for="fullName">الاسم الكامل</label>
+                        <label class="block font-semibold  text-xl sm:text-2xl mb-2" for="fullName">الاسم الكامل</label>
                         <input 
                             type="text" 
                             id="fullName" 
@@ -302,7 +303,7 @@
                     </div>
     
                     <div>
-                        <label class="block font-semibold text-white text-center text-xl sm:text-2xl mb-2" for="email">البريد الإلكتروني</label>
+                        <label class="block font-semibold  text-xl sm:text-2xl mb-2" for="email">البريد الإلكتروني</label>
                         <input 
                             type="email" 
                             id="email" 
@@ -312,7 +313,7 @@
                     </div>
     
                     <div>
-                        <label class="block font-semibold text-white text-center text-xl sm:text-2xl mb-2" for="phone">رقم الهاتف</label>
+                        <label class="block font-semibold  text-xl sm:text-2xl mb-2" for="phone">رقم الهاتف</label>
                         <input 
                             type="tel" 
                             id="phone" 
@@ -324,19 +325,20 @@
     
                 <!-- Message -->
                 <div class="mt-5">
-                    <label class="block font-semibold text-white text-xl text-center sm:text-2xl mb-2" for="message"> ما الذي تود الاستفسار عنه؟</label>
+                    <label class="block font-semibold  text-xl sm:text-2xl mb-2" for="message">رسالتك لنا:</label>
                     <textarea 
                         id="message" 
                         name="message" 
                         rows="4" 
-                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                        class="w-full pt-3 pb-1 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
                         required></textarea>
                 </div>
     
                 <!-- Submit Button -->
                 <button 
+                    id="submit_id"
                     type="submit" 
-                    class="w-full sm:w-auto bg-green-500 text-white py-3 px-6 mt-6 rounded-lg hover:bg-blue-600 transition duration-300">
+                    class="w-full mb-3 sm:w-auto bg-green-500  py-3 px-6 mt-6 rounded-lg hover:bg-blue-600 transition duration-300">
                     إرسال
                 </button>
             </form>
@@ -346,52 +348,73 @@
 
 
     <!-- Section 4 - Contact Us -->
-    <footer id="contact_id" class="section scroll-link w-full h-screen bg-black">
-        
-        <div class="flex gap-y-6">
-            <div class="pt-20">
-                <h1 class="mx-8 text-6xl font-bold bg-gradient-to-r from-red-400 via-pink-600 to-purple-500 bg-clip-text text-transparent text-right">تواصل معنا </h1>
-                <!-- معلومات الشركة -->
-                <div class="flex-cols gap-x-10">
-                    <div class="mx-8 mt-4 flex-cols items-center content-center gap-y-8 text-white">
-                        <div class="py-3 text-right">
-                            <h1 class="text-xl">المقر الرئيسي في الكويت</h1>
-                            <p class="text-lg">المكتب رقم 6، الطابق الأول، مبنى فهد محمد العتيقي، شارع الشهداء، شرق، الكويت</p>
-                            <p class="text-lg">الهاتف: +965 2245 9183 - 2245 9173 - 2241 1029 الفاكس: +965 2245 9173</p>
-                        </div>
-
-                        <div class="py-3 text-right">
-                            <h1 class="text-xl">فرع مصر</h1>
-                            <p class="text-lg">عمارات الفاروقية، جسر السويس، هايكستب، قسم النزهة، محافظة القاهرة، مصر</p>
-                            <p class="text-lg">الهاتف: +2 02 2192 2588 الفاكس: +2 02 2192 2588</p>
-                        </div>
-
-                        <div class="py-3 text-right">
-                            <h1 class="text-xl">فرع الولايات المتحدة الأمريكية</h1>
-                            <p class="text-lg">3001 Colonial PKWY جناح رقم 1127، سيدار بارك، تكساس 78613</p>
-                            <p class="text-lg">+1 832 267 5617</p>
-                        </div>
+    <footer class="section scroll-link w-full bg-black text-right">
+        <div class="flex flex-col md:flex-row gap-6">
+            <!-- Contact Info -->
+            <div class="pt-16 md:pt-20 md:w-1/2">
+                    <h1 class="mx-8 text-4xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-pink-600 to-purple-500 bg-clip-text text-transparent">
+                        اتصل بنا
+                    </h1>
+                    <div class="flex flex-col gap-6 mt-2 mx-8">
+                    <!-- Kuwait Office -->
+                    <div class="py-1">
+                        <h2 class="text-lg md:text-xl font-semibold">المقر الرئيسي في الكويت</h2>
+                        <p class="text-sm sm:text-base md:text-lg">
+                            المكتب رقم 6، الطابق الأول، مبنى فهد محمد العتيكي، شارع الشهداء، منطقة الشرق، الكويت
+                        </p>
+                        <p class="text-sm sm:text-base md:text-lg">
+                            الهاتف: +965 2245 9183 - 2245 9173 - 2241 1029<br />
+                            الفاكس: +965 2245 9173
+                        </p>
+                    </div>
+                    <!-- Egypt Office -->
+                    <div class="py-1 md:py-3 sm:py-2 ">
+                        <h2 class="text-lg md:text-xl font-semibold">فرع مصر</h2>
+                        <p class="text-sm sm:text-base md:text-lg">
+                            مباني الفاروقية، جسر السويس، هوكستيب، قسم النزهة، محافظة القاهرة، مصر
+                        </p>
+                        <p class="text-sm sm:text-base md:text-lg">
+                            الهاتف: +2 02 2192 2588  
+                            الفاكس: +2 02 2192 2588
+                        </p>
+                    </div>
+                    <!-- USA Office -->
+                    <div class="py-1">
+                        <h2 class="text-lg md:text-xl font-semibold">فرع الولايات المتحدة</h2>
+                        <p class="text-sm sm:text-base md:text-lg">
+                            3001 طريق كولونيال السريع، الجناح رقم 1127، سيدار بارك، تكساس 78613
+                        </p>
+                        <p class="text-sm sm:text-base md:text-lg">+1 832 267 5617</p>
                     </div>
 
-                    <div class="mx-8 mt-4 flex gap-x-5 text-right items-center content-center gap-y-2 text-white text-xl">
-                        <h2>www.egcss.com</h2>
-                        <h2>ceo@egcss.com</h2>
-                        <h2>info@egcss.com</h2>
-                    </div>
-                </div>
 
-                
+
             </div>
-
-            <div class="w-full px-10 pt-16">
-                <iframe class="h-full w-full  rounded-xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13503127.28476268!2d27.63829592244767!3d27.854778911129948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14368976c35c36e9%3A0x2c45a00925c4c444!2sEgypt!5e0!3m2!1sen!2s!4v1737979492585!5m2!1sen!2s" style="border:0;" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+            
+            <!-- Contact Links -->
+                <div class="mt-4 text-center mx-8 flex flex-col justify-center content-center items-center md:flex-row gap-4 text-base md:text-xl">
+                    <h2>www.egcss.com</h2>
+                    <h2>ceo@egcss.com</h2>
+                    <h2>info@egcss.com</h2>
+                </div>
             </div>
     
-
+            <!-- Map -->
+            <div class="w-full h-80 md:h-auto md:w-1/2 px-6 md:px-10 md:pt-20 lg:pt-20 xl:pt-20 sm:pt-20 pt-20">
+                <iframe
+                class="h-full w-full rounded-xl"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13503127.28476268!2d27.63829592244767!3d27.854778911129948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14368976c35c36e9%3A0x2c45a00925c4c444!2sEgypt!5e0!3m2!1sen!2s!4v1737979492585!5m2!1sen!2s"
+                style="border: 0;"
+                allowfullscreen="false"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+            </div>
         </div>
-
-
     </footer>
+    
 
     </div>
 
@@ -442,6 +465,10 @@
             alert("Error sending message. Please try again.");
             });
         });
+
+        document.getElementById("submit_id").addEventListener('click', (event) => {
+            alert('Your Message Was Sent To Our Email!');
+        });        
         </script>
 
 
