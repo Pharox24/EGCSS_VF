@@ -93,16 +93,16 @@ animation: wiggle 0.5s infinite;
 
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "American Typewriter";
+    font-family: "Times New Roman";
 }
 
 button {
-    font-family: "Times New Roman";
+    font-family: "Georgia";
 }
 
 
 p, li, a, ul, ol {
-    font-family: "Times New Roman";
+    font-family: "Georgie";
 }
 
 @keyframes scroll {
