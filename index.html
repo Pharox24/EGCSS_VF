@@ -13,56 +13,62 @@
         <script src="logic.js"></script>
         <style>
             html, body {
-                
+                overflow-x: 0;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                overflow: auto;
             }
         </style>
     </head>
 
 
-        <body style="background-color: #F7F7F7;">
+    <!--  style="background-color: #F7F7F7;" -->
+        <body class="flex-grow" style="background-color: #F7F7F7;">
 
-    <!-- Website Image Background -->
-    
+
+            <!-- Main Container -->
+<div class="w-full min-h-screen flex flex-col">
 
     <!-- Website Logo SVG -->
-    <div class="w-full h-screen">
+    <div class="flex-grow flex flex-col items-center justify-center">
+        <img class="w-auto h-96" src="Images/smifid_logo.jpg" alt="EGCSS Pictographic Logo">
 
-        <div class="mt-6 flex justify-center items-center">
-            <img class="w-auto h-96" src="Images/smifid_logo.jpg" alt="EGCSS Pictographic Logo">
-        </div>
-
-        <!-- Links to other branches of EGGCSS and Affliate Companies -->
-        <div class="flex flex-col md:flex-row gap-5 mt-6 justify-center items-center text-white">
-            <a  href="http://shuaamisr.com/" target="_blank" class="h-20 w-52 bg-gray-800 hover:bg-blue-900 hover:opacity-90 shadow-3xl text-xl lg:text-2xl flex justify-center items-center rounded-lg pulse-effect lg:h-30 lg:w-42">
+        <!-- Links to other branches -->
+        <div class="flex flex-col md:flex-row gap-5 mt-6 justify-center items-center text-white md:mt-20 md:text-lg lg:text-base font-bold">
+            <a href="http://shuaamisr.com/" target="_blank"
+                class="h-20 w-52 md:w-32 md:h-20 md:text-base py-10 lg:w-56 lg:h-32 bg-gray-800 hover:bg-blue-900 hover:opacity-90 shadow-3xl text-xl lg:text-2xl flex justify-center items-center rounded-xl pulse-effect">
                 Food Processing
             </a>
-
-            <a href="energy_website/energy.html" target="blank" class="h-20 w-52 bg-gray-800 hover:bg-blue-900 hover:opacity-90 shadow-3xl text-xl lg:text-2xl flex justify-center items-center rounded-lg pulse-effect lg:h-30 lg:w-42">
+            <a href="energy_website/energy.html" target="blank"
+                class="h-20 w-52 md:w-32 md:h-20 md:text-base py-10 lg:w-56 lg:h-32 bg-gray-800 hover:bg-blue-900 hover:opacity-90 shadow-3xl text-xl lg:text-2xl flex justify-center items-center rounded-xl pulse-effect">
                 Energy
             </a>
-
-            <a href="http://egcss.net" target="_blank" class="h-20 w-52 bg-gray-800 hover:bg-blue-900 hover:opacity-90 shadow-3xl text-xl lg:text-2xl flex justify-center items-center rounded-lg pulse-effect whitespace-nowrap lg:h-30 lg:w-42">
+            <a href="http://egcss.net" target="_blank"
+                class="h-20 w-52 md:w-32 md:h-20 md:text-base py-10 lg:w-56 lg:h-32 bg-gray-800 hover:bg-blue-900 hover:opacity-90 shadow-3xl text-xl lg:text-2xl flex justify-center items-center rounded-xl pulse-effect">
                 International Trade
             </a>
-
-            <a href="home.html" target="_blank" class="h-20 w-52 bg-gray-800 hover:bg-blue-900 hover:opacity-90 shadow-3xl text-xl lg:text-2xl flex justify-center items-center rounded-lg pulse-effect hover:animate-pulse lg:h-30 lg:w-42">
+            <a href="home.html" target="_blank"
+                class="h-20 w-52 md:w-32 md:h-20 md:text-base py-10 lg:w-56 lg:h-32 bg-gray-800 hover:bg-blue-900 hover:opacity-90 shadow-3xl text-xl lg:text-2xl flex justify-center items-center rounded-xl pulse-effect">
                 Logistics
             </a>
         </div>
-
     </div>
 
-
-
-    <footer class="bg-black w-full mt-16">
-        <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-2xl text-white py-12">
-            <h1 id="copyText" onclick="copyToClipboard()" class="px-4 hover:text-blue-500 cursor-pointer hover:underline">inquiry@shuaamisr.com</h1>
-            <h1 class="px-1">|<h1>
-            <h1 id="copyText2" onclick="copyToClipboard2()" class="px-4 hover:text-blue-500 cursor-pointer hover:underline">(+20) 1003046969</h1>
-            <h1 class="px-1">|<h1>
+    <!-- Footer -->
+    <footer class="bg-black w-full py-12 mt-10">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-2xl text-white py-4">
+            <h1 id="copyText" onclick="copyToClipboard()" class="px-4 hover:text-blue-500 cursor-pointer hover:underline">
+                inquiry@shuaamisr.com
+            </h1>
+            <h1 id="copyText2" onclick="copyToClipboard2()" class="px-4 hover:text-blue-500 cursor-pointer hover:underline">
+                (+20) 1003046969
+            </h1>
             <h1 class="px-4">© 2017</h1>
         </div>
     </footer>
+
+</div>
+
     </body>
 
 
