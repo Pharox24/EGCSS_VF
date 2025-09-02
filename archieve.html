@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>EGCSS</title>
+        <meta name="description" content="">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="png" href="../Images/egcss_logo_2.svg">
+        <script src="../logic.js"></script>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                scroll-behavior: smooth;  /* Smooth scrolling effect */
+            }
+        
+            /* Parent container for scroll snapping */
+            .snap-container {
+                scroll-snap-type: y mandatory;
+                overflow-y: scroll;
+                height: 100vh;
+            }
+        
+            .section {
+                height: 100vh;
+                font-size: 2rem;
+                scroll-snap-align: start;
+            }
+        </style>
+
+
+    </head>
+
+    <body>
+
+    <!-- Navbar -->
+    <div class="navbar bg-black  text-white  fixed w-full z-20">
+        <div class="container flex items-center justify-between h-16">
+    
+            <!-- Logo Section -->
+            <div class="flex gap-x-2 text-white">
+                <h1 class="flex items-center text-white text-xl pl-3 mx-4">EGCSS</h1>
+                <a href="home_ar.html" class="px-2 py-1 text-bold hover:bg-white hover:text-black rounded-xl">Ar</a>
+                <h1 class="px-1 py-1">|</h1>
+                <a href="index.html" class="px-2 text-bold py-1 hover:bg-white hover:text-black rounded-xl">En</a>
+            </div>
+    
+            <!-- Hamburger Menu (Mobile) -->
+            <div class="sm:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+    
+            <!-- Navbar Links (Hidden on Mobile by Default) -->
+            <div id="menu" class="hidden sm:flex space-x-4 text-[clamp(1rem, 2.5vw, 2rem)]">
+                <a href="../index.html" class="rounded px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl" target="_blank">SMIFID Group</a>
+                <a href="home.html" class="rounded px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl">Home</a>
+                <a href="about.html" class="rounded px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl">About Us</a>
+                <a href="services.html" class="rounded px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl">Services</a>
+                <a href="contact.html" class="rounded px-3 py-2 font-semibold hover:text-black hover:bg-white rounded-xl">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Mobile Menu (Dropdown) -->
+    <div id="mobile-menu" class="hidden sm:hidden bg-black">
+        <a href="home.html" class="block text-white py-2 px-4 hover:text-black hover:bg-white rounded-xl">Home</a>
+        <a href="about.html" class="block text-white py-2 px-4 hover:text-black hover:bg-white rounded-xl">About Us</a>
+        <a href="services.html" class="block text-white py-2 px-4 hover:text-black hover:bg-white rounded-xl">Services</a>
+        <a href="contact.html" class="block text-white py-2 px-4 hover:text-black hover:bg-white rounded-xl">Contact Us</a>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', (event) => {
+            event.preventDefault();
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+
+    <div class="snap-container">
+            <!-- Website Image Background -->
+    <div class="section relative bg-black">
+        <img src="../Images/ship_stock_img.jpg" class="w-full h-screen opacity-70 object-cover" alt="Shipping Vessal Background Image">
+
+        <!-- Website Logo SVG -->
+        <div class="absolute inset-0">
+            <div class="mt-12 flex justify-center items-center">
+                <img src="../Images/egcss_logo_2.svg" alt="EGCSS Pictographic Logo">
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    <div class="overflow-hidden whitespace-nowrap relative bg-red-600 border-lg p-5">
+        <div class="inline-block animate-scroll text-lg font-bold text-white">
+          <span class="mx-8">USA</span>
+          <span class="mx-8">Canada</span>
+          <span class="mx-8">UK</span>
+          <span class="mx-8">Australia</span>
+          <span class="mx-8">Germany</span>
+          <span class="mx-8">France</span>
+          <span class="mx-8">China</span>
+          <span class="mx-8">Japan</span>
+          <span class="mx-8">India</span>
+          
+          <span class="mx-8">USA</span>
+          <span class="mx-8">Canada</span>
+          <span class="mx-8">UK</span>
+          <span class="mx-8">Australia</span>
+          <span class="mx-8">Germany</span>
+          <span class="mx-8">France</span>
+          <span class="mx-8">China</span>
+          <span class="mx-8">Japan</span>
+          <span class="mx-8">India</span>
+        </div>
+      </div>
+      
+
+
+    
+    
+      <!-- Section 1 : About Egcss -->
+     <section class="section flex-cols justify-center content-center items-center bg-black text-white w-full h-screen">
+        <h1 class="text-4xl mt-10 mx-10">About EGCSS</h1>
+        <p class="text-xl mt-5 mx-10 mb-10">
+            EGCSS is a Kuwait-based, registered company specializing in shipping, international freight forwarding, and logistics. We provide comprehensive transportation solutions across sea, air, and overland routes, ensuring efficient and reliable movement of goods globally. Our extensive network and industry expertise allow us to cater to a wide range of clients, from individuals to large corporations, helping them achieve seamless supply chain operations.
+            <br>
+            Our services are tailored to meet the evolving demands of modern businesses, offering end-to-end logistics support that includes customs clearance, warehousing, and distribution. Whether it’s managing complex logistics chains or handling urgent shipments, EGCSS is committed to delivering excellence with precision and speed.
+        </p>
+     </section>
+
+
+     <!-- Section 2 : Our Expertise & Experience -->
+      <section class="section flex-cols justify-center content-center items-center bg-black text-white w-full h-screen">
+        <h1 class="text-4xl mt-10 mx-10">Our Expertise & Experience</h1>
+        <div class="text-xl mt-5 mx-10 mb-10">
+            <p>Founded by a seasoned shipping professional with over 20 years of hands-on industry experience, EGCSS brings deep-rooted knowledge and a thorough understanding of global logistics. Our founder's journey spans various aspects of the shipping industry—beginning with direct work alongside ship owners, progressing into total logistics solutions, and covering every facet of the supply chain.</p>
+            <h3>Our capabilities extend beyond standard freight forwarding services to include:</h3>
+            <ul>Overall Free Zone Activities: Expertise in managing warehousing, distribution, and value-added services within free zones.</ul>
+            <ul>Freight Forwarding (Air & Sea): Tailored solutions to move cargo efficiently via major trade routes worldwide.</ul>
+            <ul>NVOCC (Non-Vessel Operating Common Carrier): Acting as an intermediary to offer flexible shipping solutions.</ul>
+            <ul>Ship Chandelling: Providing comprehensive supplies and support services to vessels at ports.</ul>
+            <ul>Project Handling: Managing specialized logistics for oversized, complex, and time-sensitive projects.</ul>
+            <p>With a solid foundation and a commitment to innovation, EGCSS has built a reputation for reliability, efficiency, and customer satisfaction.</p>
+        </div>
+      </section>
+
+
+
+    <!-- Section 3 : Why Choose Egcss -->
+    <section class="section flex-cols justify-center content-center items-center bg-black text-white w-full h-screen">
+        <h1 class="text-4xl mt-10 mx-10">Why Choose EGCSS</h1>
+        <div class="text-xl mt-5 mx-10 mb-10">
+            <p>At EGCSS, we understand that time is a critical factor in the logistics industry. Our team operates with a sense of urgency and preparedness, ensuring that your shipments are always on schedule and your business remains ahead of the curve.</p>
+            <h2>What Sets Us Apart?</h2>
+            <ol>Always Available: Our dedicated team is ready to assist you anytime, ensuring uninterrupted support for your logistics needs.</ol>
+            <ol>Reliability & Commitment: We prioritize your business goals, offering solutions that align with your success.</ol>
+            <ol>Customer-Centric Approach: At EGCSS, we don’t just move cargo; we care about your growth and work as an extension of your team.</ol>
+            <h2>With EGCSS, you are always prepared for new opportunities and challenges. We believe in fostering long-term partnerships built on trust, efficiency, and a shared vision of success.</h2>
+        </div>
+    </section>
+
+
+    <footer class="section w-full h-screen bg-black">
+        <h1 class="mx-8 text-6xl font-bold bg-gradient-to-r from-red-400 via-pink-600 to-purple-500 bg-clip-text text-transparent">Contact Us</h1>
+        <!-- Company Info -->
+        <div class="mx-8 mt-4 flex-cols items-center content-center gap-y-2 text-white text-xl">
+            <h2>www.egcss.com</h2>
+            <h2>ceo@egcss.com</h2>
+            <h2>info@egcss.com</h2>
+        </div>
+          
+    </footer>
+
+    </div>
+
+
+    </body>
+
+
+</html>
+
+
+
+<!--  Old nav bar version
+<div class="navbar bg-white opacity-60 text-black font-serif fixed w-full max-w-screen-xl min-w-screen-lg mx-7 z-20 rounded-lg mt-3 px-4">
+-->
