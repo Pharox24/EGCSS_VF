@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="png" href="Images/egcss_logo_2.svg">
+        <link rel="icon" type="png" href="static/Images/egcss_logo_2.svg">
         <script src="logic.js"></script>
         <style>
             html, body {
@@ -33,6 +33,7 @@
     <!-- Navbar -->
     <div class="navbar bg-indigo-900 fixed w-full z-20 justify-center">
         <div class="container flex content-center items-center justify-between h-16 px-4">
+            <!-- <img src="static/Images/egcss_logo_img.png" class="h-16 w-auto"> -->
             <!-- Logo Section -->
             <h1 class="flex items-center text-xl pl-3 mx-4">EGCSS</h1>
 
@@ -92,12 +93,12 @@
     <div class="snap-container">
         <!-- Website Image Background -->
         <div class="section scroll-link relative bg-black">
-            <img src="Images/ship_img2.jpg" class="w-full h-screen object-cover" alt="Shipping Vessal Background Image">
+            <img src="static/Images/ship_img2.jpg" class="w-full h-screen object-cover" alt="Shipping Vessal Background Image">
 
         <!-- Website Logo SVG -->
         <div class="absolute inset-0">
             <div class="mt-96 xl:mt-32 lg:mt-22 md:mt-52 sm:mt-64 flex justify-center items-center">
-                <img class="h-full w-auto" src="Images/egcss_logo_2.svg" alt="EGCSS Pictographic Logo">
+                <img class="h-full w-auto" src="static/Images/egcss_logo_2.svg" alt="EGCSS Pictographic Logo">
             </div>
         </div>
     </div>
@@ -170,7 +171,7 @@
                     <div class="relative overflow-hidden rounded-2xl shadow-2xl border-4 border-gray-800">
                         <img 
                             class="w-full h-auto object-cover transition-transform duration-700 hover:scale-105" 
-                            src="Images/ship_stock_img2.jpeg" 
+                            src="static/Images/ship_stock_img2.jpeg" 
                             alt="Shipping Container Vessel"
                             loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
@@ -243,7 +244,7 @@
     <section id="service_id" class="relative bg-gray-900 section scroll-link w-full min-h-screen py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <!-- Background Image with Gradient Overlay -->
         <div class="absolute inset-0">
-            <img class="w-full h-full object-cover opacity-20" src="Images/shipping_stock_img.webp" alt="Shipping Background" loading="lazy">
+            <img class="w-full h-full object-cover opacity-20" src="static/Images/shipping_stock_img.webp" alt="Shipping Background" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/60 to-gray-900/80"></div>
         </div>
 
@@ -266,7 +267,7 @@
             <!-- Services Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Sea Freight Card -->
-                <div class="group bg-gray-800 bg-opacity-60 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-xl hover:shadow-purple-500/10">
+                <div class="group bg-gray-800 bg-opacity-60 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-xl hover:shadow-purple-500/10">
                     <div class="flex items-center mb-6">
                         <div class="p-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg mr-4 group-hover:rotate-12 transition-transform">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -489,26 +490,26 @@
                 </div>
 
     <!-- Image Section - Debug Version -->
-    <div class="lg:w-1/2 relative group min-h-[300px] bg-gray-100/20 border border-dashed border-red-500">
+    <div class="lg:w-1/2 relative group min-h-[300px] bg-gray-100/20">
         <!-- Debug container - remove border styles in production -->
         <div class="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-2xl transition-all duration-300 h-full">
             <!-- Fallback content if image fails to load -->
             <div class="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
-                Image: "Images/handshake_img.jpg"
+                Image: "static/Images/handshake_img.jpg"
             </div>
-            
-            <img 
+
+            <img
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="Images/handshake_img.jpg" 
+                src="static/Images/vessal_5.jpeg"
                 alt="EGCSS Team Handshake"
                 loading="lazy"
                 width="600"
                 height="400"
                 onerror="this.style.display='none'">
-                
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+            <!-- <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div> -->
         </div>
-        
+
         <!-- Image Badge -->
         <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl transform group-hover:-translate-y-2 transition-transform duration-300">
             <div class="flex flex-col items-center">
@@ -522,9 +523,11 @@
         </div>
     </section>
 
+
+    <!-- Charter Vessal Slides Container -->
     <section id="charter_id" class="relative w-full h-screen overflow-hidden bg-white" style="font-family: Georgie">
          <!-- absolute inset-0 object-cover w-full h-full md:h-[150vh] opacity-40 -->
-        <img src="Images/vessal_5.jpeg" class="absolute inset-0 object-cover min-h-screen max-h-[170vh] h-auto w-auto md:h-[150vh] ">
+        <img src="static/Images/vessal_5.jpeg" class="absolute inset-0 object-cover min-h-screen max-h-[170vh] h-auto w-auto md:h-[150vh] ">
         <!-- Carousel Container -->
         <div class="relative h-full">
             <!-- Slides Container -->
@@ -728,7 +731,7 @@
             </button>
         </div>
     </section>
-    
+
     <script>
         let currentIndex = 0;
         let autoScrollInterval;
@@ -842,7 +845,7 @@
             <!-- Header Section -->
             <div class="text-center mb-12">
                 <div class="inline-flex items-center gap-4 mb-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full">
-                    <img class="h-12 w-12" src="Images/paper_Form.svg" alt="Form Icon" loading="lazy">
+                    <img class="h-12 w-12" src="static/Images/paper_Form.svg" alt="Form Icon" loading="lazy">
                     <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                         Business Enquiries
                     </h1>
@@ -971,7 +974,7 @@
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-red-400 via-pink-600 to-purple-500 bg-clip-text text-transparent mb-8">
                         Get In Touch
                     </h1>
-                    
+
                     <div class="space-y-8">
                         <!-- UAE Office -->
                         <div class="group">
