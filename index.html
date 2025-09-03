@@ -21,6 +21,62 @@
                 overflow-y: hidden;
                 overflow: auto;
             }
+
+
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            min-height: 200vh; /* For demonstration only */
+        }
+        
+        .navbar {
+            backdrop-filter: blur(10px);
+            background: rgba(79, 70, 229, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background: rgba(67, 56, 202, 0.98);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background: white;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-link:hover:after {
+            width: 70%;
+        }
+        
+        .logo {
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, #fff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .mobile-menu {
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            transform-origin: top;
+        }
+
         </style>
 
 
@@ -28,65 +84,95 @@
 
     <body class="overflow-x-hidden text-white">
 
-    <!-- Navbar -->
-    <div class="navbar bg-indigo-900 fixed w-full z-20 justify-center">
-        <div class="container flex content-center items-center justify-between h-16 px-4">
-            <!-- <img src="static/Images/egcss_logo_img.png" class="h-16 w-auto"> -->
+            <!-- Modern Navbar -->
+    <div class="navbar fixed w-full z-50 top-0">
+        <div class="container mx-auto flex items-center justify-between h-16 px-4 md:px-8">
             <!-- Logo Section -->
-            <h1 class="flex items-center text-xl pl-3 mx-4">EGCSS</h1>
+            <div class="flex items-center">
+                <h1 class="logo text-2xl md:text-2xl font-bold tracking-tight">EGCSS</h1>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                <a href="https://www.shuaamisr.com" class="nav-link px-4 py-2 text-s font-medium text-white hover:bg-indigo-800 rounded-lg transition-all duration-300 flex items-center" target="_blank">
+                    <i class="fas fa-building mr-2 text-indigo-200"></i>SMIFID Group
+                </a>
+                <a href="#home_id" class="nav-link px-4 py-2 text-s font-medium text-white hover:bg-indigo-800 rounded-lg transition-all duration-300">Home</a>
+                <a href="#about_id" class="nav-link px-4 py-2 text-s font-medium text-white hover:bg-indigo-800 rounded-lg transition-all duration-300">About</a>
+                <a href="#service_id" class="nav-link px-4 py-2 text-s font-medium text-white hover:bg-indigo-800 rounded-lg transition-all duration-300">Services</a>
+                <a href="#charter_id" class="nav-link px-4 py-2 text-s font-medium text-white hover:bg-indigo-800 rounded-lg transition-all duration-300">Charter</a>
+                <a href="#contact_id" class="nav-link px-4 py-2 text-s font-medium text-white hover:bg-indigo-800 rounded-lg transition-all duration-300">Contact</a>
+                <a href="#footer_id" class="nav-link px-4 py-2 text-s font-medium text-white hover:bg-indigo-800 rounded-lg transition-all duration-300">HQ</a>
+            </nav>
 
             <!-- Hamburger Menu (Mobile) -->
             <div class="md:hidden">
-                <button id="menu-toggle" class="focus:outline-none text-3xl mr-3">
-                    <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button id="menu-toggle" class="focus:outline-none text-white p-2 rounded-lg hover:bg-indigo-800 transition-colors">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
-
-            <!-- Navbar Links (Hidden on Mobile by Default) -->
-            <nav id="menu" class="hidden md:flex justify-end space-x-4 text-[clamp(1rem, 2.5vw, 2rem)]">
-                <a href="https://www.shuaamisr.com" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white" target="_blank">SMIFID Group</a>
-                <a href="#home_id" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white">Home</a>
-                <a href="#about_id" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white">About Us</a>
-                <a href="#service_id" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white">Services</a>
-                <a href="#charter_id" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white">Charter</a>
-                <a href="#contact_id" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white">Contact Us</a>
-                <a href="#footer_id" class="px-3 py-2 font-semibold hover:text-black rounded-xl hover:bg-white">HQ</a>
-            </nav>
         </div>
     </div>
 
-
     <!-- Mobile Menu (Dropdown) -->
-    <div id="mobile-menu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-indigo-900 z-30 max-h-[400px] overflow-y-auto shadow-lg transition-all">
-        <a href="#home_id" class="block  py-4 px-4 hover:text-black hover:bg-white rounded-xl">Home</a>
-        <a href="#about_id" class="block  py-4 px-4 hover:text-black hover:bg-white rounded-xl">About Us</a>
-        <a href="#service_id" class="block  py-4 px-4 hover:text-black hover:bg-white rounded-xl">Services</a>
-        <a href="#contact_id" class="block py-4 px-4 hover:text-black hover:bg-white rounded-xl">Charter</a>
-        <a href="#contact_id" class="block  py-4 px-4 hover:text-black hover:bg-white rounded-xl">Contact Us</a>
-        <a href="#footer_id" class="block  py-4 px-4 hover:text-black hover:bg-white rounded-xl">HQ</a>
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden fixed top-16 left-0 right-0 bg-indigo-800 z-40 shadow-xl transform scale-y-0 origin-top">
+        <div class="container mx-auto px-4 py-3">
+            <a href="https://www.shuaamisr.com" class="flex items-center text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors mb-2" target="_blank">
+                <i class="fas fa-building mr-3 text-indigo-200"></i>SMIFID Group
+            </a>
+            <a href="#home_id" class="block text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors mb-2">Home</a>
+            <a href="#about_id" class="block text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors mb-2">About Us</a>
+            <a href="#service_id" class="block text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors mb-2">Services</a>
+            <a href="#charter_id" class="block text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors mb-2">Charter</a>
+            <a href="#contact_id" class="block text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors mb-2">Contact Us</a>
+            <a href="#footer_id" class="block text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors">HQ</a>
+        </div>
     </div>
 
+    <!-- Content Padding -->
+    <!-- <div class="pt-20"></div> -->
 
-    <!-- Navbar Code Handling The Mobile Menu Switch -->
+    <!-- Navbar Script -->
     <script>
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.querySelector('.navbar');
 
+        // Toggle mobile menu
         menuToggle.addEventListener('click', (event) => {
             event.preventDefault();
+            event.stopPropagation();
+            
             mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('scale-y-0');
+            mobileMenu.classList.toggle('scale-y-100');
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', (event) => {
             if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
                 mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('scale-y-100');
+                mobileMenu.classList.add('scale-y-0');
             }
         });
-    </script>
 
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Prevent mobile menu from closing when clicking inside it
+        mobileMenu.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+    </script>
 
     <div class="snap-container">
         <!-- Website Image Background -->
@@ -95,14 +181,13 @@
                 <source src="static/videos/charterVessel.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-
-            <!-- Website Logo SVG -->
-            <div class="absolute inset-0">
-                <div class="mt-96 xl:mt-32 lg:mt-22 md:mt-52 sm:mt-64 flex justify-center items-center">
-                    <img class="h-full w-auto" src="static/Images/egcss_logo_2.svg" alt="EGCSS Pictographic Logo">
-                </div>
+        
+            <!-- Centered Logo using flexbox -->
+            <div class="absolute inset-0 flex justify-center items-center">
+                <img class="max-h-[60%] w-auto" src="static/Images/egcss_logo_2.svg" alt="EGCSS Pictographic Logo">
             </div>
         </div>
+                  
 
 
 
@@ -627,7 +712,7 @@
                 <!-- Submit Button -->
                 <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div class="text-sm text-gray-500">
-                        We'll never share your information. See our <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a>.
+                        We'll never share your information.
                     </div>
                     <button 
                         type="submit" 
