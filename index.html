@@ -575,75 +575,36 @@
                     </div>
                 </div>
 
-<!-- Improved Image Section (copy/paste) -->
-<div class="lg:w-1/2 relative group min-h-[300px]">
-    <!-- Outer container to control layout -->
-    <div class="relative overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 h-full min-h-[300px]">
-      <!-- Actual <img> (keeps semantics & accessibility). No onerror hiding. -->
-      <img
-        id="hero-handshake"
-        src="static/Images/handshake_img.jpg"
-        alt="EGCSS Team Handshake"
-        loading="lazy"
-        width="1200" height="800"
-        class="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 z-0"
-        style="display:block;"
-      />
-  
-      <!-- Gradient overlay (non-blocking: pointer-events-none) -->
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none z-10"></div>
-  
-      <!-- Text overlay (z above gradient) -->
-      <div class="absolute left-4 bottom-4 z-20 pointer-events-none">
-        <h3 class="text-white text-lg font-semibold">Global Partnerships</h3>
-        <p class="text-sm text-gray-200">Building trust since 2007</p>
-      </div>
-    </div>
-  
-    <!-- Floating Badge (z above everything) -->
-    <div class="absolute -bottom-6 -right-6 z-30">
-      <div class="bg-white p-4 rounded-xl shadow-xl transform transition-transform duration-300 group-hover:-translate-y-2">
-        <div class="flex flex-col items-center">
-          <div class="text-2xl font-bold text-indigo-900">Since 2007</div>
-          <div class="text-sm font-medium text-indigo-600">Trusted Logistics Partner</div>
-          <div class="absolute -bottom-2 h-1 w-16 bg-indigo-500 rounded-full"></div>
+        <!-- Image (keep this in your page where you want it) -->
+        <div class="lg:w-1/2 min-h-[300px]">
+        <div class=" overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 h-full min-h-[300px]">
+            <img
+            id="hero-handshake"
+            src="static/Images/handshake_img.jpg"
+            alt="EGCSS Team Handshake"
+            loading="lazy"
+            width="1200" height="800"
+            class="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 z-0"
+            style="display:block;"
+            />
+            
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Debug script: shows console messages if image loads or fails -->
-  <script>
-    (function(){
-      const img = document.getElementById('hero-handshake');
-      if (!img) {
-        console.error('Handshake img element not found in DOM.');
-        return;
-      }
-      // Log load/error
-      img.addEventListener('load', () => console.log('handshake_img.jpg loaded — naturalWidth:', img.naturalWidth, 'naturalHeight:', img.naturalHeight));
-      img.addEventListener('error', () => {
-        console.error('handshake_img.jpg failed to load. URL:', img.src);
-        // Fallback: use background-image on parent (visual fallback)
-        const parent = img.parentElement;
-        if (parent) {
-          parent.style.backgroundImage = "url('static/Images/handshake_img.jpg')";
-          parent.style.backgroundSize = "cover";
-          parent.style.backgroundPosition = "center";
-          // hide the broken <img> so fallback shows
-          img.style.display = 'none';
-        }
-      });
-      // Small sanity: ensure img has display block and visible z-index
-      img.style.display = img.style.display || 'block';
-      img.style.zIndex = img.style.zIndex || '0';
-    })();
-  </script>
-  
+
+        <div class="absolute -bottom-6 -right-6 z-30">
+            <div class="bg-white p-4 rounded-xl shadow-xl transform transition-transform duration-300 group-hover:-translate-y-2">
+            <div class="flex flex-col items-center">
+                
+            </div>
+            </div>
+        </div>
+        </div>
+
+
     </section>
 
 
-    <img src="static/Images/handshake_img.jpg" class="w-full h-full object-fit" alt="">
+    
 
 
 
@@ -952,7 +913,44 @@
     });        
     </script>
 
-
+  <!-- Safe DOM-ready script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1) Handshake image handling
+      const img = document.getElementById('hero-handshake');
+      if (!img) {
+        console.error('[UI] hero-handshake element not found in DOM. Check the id or placement of this script.');
+      } else {
+        img.addEventListener('load', () => {
+          console.log('handshake_img.jpg loaded — naturalWidth:', img.naturalWidth, 'naturalHeight:', img.naturalHeight);
+        });
+        img.addEventListener('error', () => {
+          console.error('handshake_img.jpg failed to load. URL:', img.src);
+          const parent = img.parentElement;
+          if (parent) {
+            parent.style.backgroundImage = `url('${img.src}')`;
+            parent.style.backgroundSize = 'cover';
+            parent.style.backgroundPosition = 'center';
+            img.style.display = 'none';
+          }
+        });
+      }
+    
+      // 2) Defensive fix for any code that relies on an element (offsetTop error)
+      // Replace 'someElementId' with the id used in the script that threw the offsetTop error.
+      const maybeEl = document.getElementById('someElementId'); // <-- EDIT THIS ID to match your code at index.html:909
+      if (!maybeEl) {
+        console.warn('[UI] someElementId not found — skipping offsetTop logic (prevents runtime error). ' +
+                     'Check id or HTML markup for that element.');
+      } else {
+        // Example usage (safe because we checked)
+        const top = maybeEl.offsetTop;
+        // ... your logic here ...
+        console.log('someElementId offsetTop:', top);
+      }
+    });
+    </script>
+    
     </body>
 </html>
 
